@@ -40,8 +40,10 @@ Follow the steps below to set up the app locally.
 
 3.Install dependencies:
    npm install
+   
 4.Start the development server:
   npm start
+  
 5. Open your browser and visit:
   http://localhost:3000
   
@@ -52,6 +54,7 @@ Click the Edit button on a user to update their details.
 The application is fully responsive, so you can use it on both desktop and mobile devices.
 
 ## Folder Structure
+```bash
 user-management-app/
 ├── public/
 ├── src/
@@ -62,4 +65,4 @@ user-management-app/
 │   └── ...                 # Additional files
 ├── package.json            # Project dependencies and scripts
 └── README.md               # Documentation
-
+...
