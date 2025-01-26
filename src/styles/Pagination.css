@@ -1,19 +1,63 @@
-/* src/styles/Pagination.css */
+/* Pagination container styling */
 .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Page button styles */
+.page-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Active page button */
+.page-button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #0056b3;
+  cursor: default;
+}
+
+/* Responsive design for tablets and mobile */
+@media (max-width: 768px) {
+  .page-button {
+    padding: 6px 12px;
+    font-size: 12px;
   }
-  
-  .pageButton {
-    padding: 8px 16px;
-    border: none;
-    background-color: #f1f1f1;
-    cursor: pointer;
+
+  .pagination {
+    gap: 8px;
+    padding: 8px;
   }
-  
-  .active {
-    background-color: #4CAF50;
-    color: white;
+}
+
+@media (max-width: 480px) {
+  .page-button {
+    padding: 4px 10px;
+    font-size: 10px;
   }
-  
+
+  .pagination {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+}

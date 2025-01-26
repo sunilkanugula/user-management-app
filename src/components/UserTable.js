@@ -1,43 +1,54 @@
 import React from "react";
+import "../styles/UserTable.css";
 
 const UserTable = ({ users, onEditUser, onDeleteUser }) => (
-  <table className="w-full border-collapse border border-gray-300 text-left">
-    <thead className="bg-gray-200">
-      <tr>
-        <th className="border px-4 py-2">ID</th>
-        <th className="border px-4 py-2">First Name</th>
-        <th className="border px-4 py-2">Last Name</th>
-        <th className="border px-4 py-2">Email</th>
-        <th className="border px-4 py-2">Department</th>
-        <th className="border px-4 py-2">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {users.map((user) => (
-        <tr key={user.id}>
-          <td className="border px-4 py-2">{user.id}</td>
-          <td className="border px-4 py-2">{user.firstName}</td>
-          <td className="border px-4 py-2">{user.lastName}</td>
-          <td className="border px-4 py-2">{user.email}</td>
-          <td className="border px-4 py-2">{user.department ==="" ? "Not availabe" : user.department}</td>
-          <td className="border px-4 py-2">
-            <button
-              onClick={() => onEditUser(user)}
-              className="bg-yellow-400 text-white px-2 py-1 rounded mr-2"
-            >
-              Edit
-            </button>
-            <button
-              onClick={() => onDeleteUser(user.id)}
-              className="bg-red-500 text-white px-2 py-1 rounded"
-            >
-              Delete
-            </button>
-          </td>
+  <div className="table-container">
+    <table className="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Actions</th>
         </tr>
-      ))}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {users.length > 0 ? (
+          users.map((user) => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.firstName}</td>
+              <td>{user.lastName}</td>
+              <td>{user.email}</td>
+              <td>{user.department === "" ? "Not available" : user.department}</td>
+              <td>
+                <button
+                  className="btn edit-btn"
+                  onClick={() => onEditUser(user)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="btn delete-btn"
+                  onClick={() => onDeleteUser(user.id)}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td colSpan="6" className="no-users">
+              No users available
+            </td>
+          </tr>
+        )}
+      </tbody>
+    </table>
+  </div>
 );
 
 export default UserTable;

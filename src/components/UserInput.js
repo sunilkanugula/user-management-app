@@ -1,6 +1,5 @@
-// UserInput.js
 import React from "react";
-import styles from "../styles/App.css"; // Assuming the same styles for the form
+import "../styles/UserInput.css"; // Assuming the styles file is in the `styles` directory
 
 const UserInput = ({
   formData,
@@ -9,41 +8,61 @@ const UserInput = ({
   handleSubmit,
 }) => {
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <input
-        type="text"
-        name="firstName"
-        value={formData.firstName}
-        placeholder="First Name"
-        onChange={handleInputChange}
-        required
-      />
-      <input
-        type="text"
-        name="lastName"
-        value={formData.lastName}
-        placeholder="Last Name"
-        onChange={handleInputChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        placeholder="Email"
-        onChange={handleInputChange}
-        required
-      />
-      <input
-        type="text"
-        name="department"
-        value={formData.department}
-        placeholder="Department"
-        onChange={handleInputChange}
-        required
-      />
-      <button type="submit">{isEdit ? "Update User" : "Add User"}</button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleSubmit} className="user-form">
+        <div className="form-group">
+          <label htmlFor="firstName">First Name</label>
+          <input
+            id="firstName"
+            type="text"
+            name="firstName"
+            value={formData.firstName}
+            placeholder="Enter first name"
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            id="lastName"
+            type="text"
+            name="lastName"
+            value={formData.lastName}
+            placeholder="Enter last name"
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            placeholder="Enter email"
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="department">Department</label>
+          <input
+            id="department"
+            type="text"
+            name="department"
+            value={formData.department}
+            placeholder="Enter department"
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <button type="submit" className="submit-btn">
+          {isEdit ? "Update User" : "Add User"}
+        </button>
+      </form>
+    </div>
   );
 };
 
