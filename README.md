@@ -53,6 +53,12 @@ Use the Add User form to add new users.
 Click the Edit button on a user to update their details.
 The application is fully responsive, so you can use it on both desktop and mobile devices.
 
+## Screenshots
+
+Below is a screenshot showcasing the User Management App interface:
+
+![User Management App](https://res.cloudinary.com/di1e0mwbu/image/upload/v1737906306/User_Management_System_-_Google_Chrome_26-01-2025_21_02_19_dque6x.png)
+
 ## Folder Structure
 ```bash
 user-management-app/
@@ -65,4 +71,6 @@ user-management-app/
 │   └── ...                 # Additional files
 ├── package.json            # Project dependencies and scripts
 └── README.md               # Documentation
-...
+
+
+
