@@ -1,0 +1,100 @@
+/* General container styling */
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for larger screens */
+@media (min-width: 768px) {
+  .appContainer {
+    padding: 40px;
+  }
+
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  form input,
+  form button {
+    width: 45%;
+  }
+
+  form button {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .appContainer {
+    max-width: 960px;
+    padding: 40px;
+  }
+
+  form input,
+  form button {
+    width: 48%;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 12px;
+  }
+}
+
+/* Additional styling for responsiveness on mobile */
+@media (max-width: 600px) {
+  .appContainer {
+    padding: 15px;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  form button {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
