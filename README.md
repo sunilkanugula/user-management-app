@@ -45,7 +45,7 @@ Follow the steps below to set up the app locally.
 5. Open your browser and visit:
   http://localhost:3000
   
-##Usage
+## Usage
 On the homepage, you can view all added users.
 Use the Add User form to add new users.
 Click the Edit button on a user to update their details.
