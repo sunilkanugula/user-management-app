@@ -50,8 +50,8 @@ On the homepage, you can view all added users.
 Use the Add User form to add new users.
 Click the Edit button on a user to update their details.
 The application is fully responsive, so you can use it on both desktop and mobile devices.
-#Folder Structure
 
+## Folder Structure
 user-management-app/
 ├── public/
 ├── src/
